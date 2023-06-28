@@ -3,18 +3,11 @@ import searchIcon from "../assets/icons8-search-24.png";
 import dropdownIcon from "../assets/Images/icons8-down-48.png";
 import moonIcon from "../assets/Images/icons8-moon-60.png";
 import sunIcon from "../assets/Images/icons8-sun-50.png"
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
 function Header() {
-    const [toggle, setToggle] = useState<string>('light');
     const {theme, setTheme} = useContext(ThemeContext)
-    const storageTheme: string = 'theme';
-    const defaultTheme:string = 'dark'
-
-    useEffect(()=> {
-        // setTheme(localStorage.getItem(storageTheme)?localStorage.getItem(storageTheme): defaultTheme)
-    }, [])
   return (
     <div className="flex justify-around items-center">
       <img src={logo} width={60} height={60} />
